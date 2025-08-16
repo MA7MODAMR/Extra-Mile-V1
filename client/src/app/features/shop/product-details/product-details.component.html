@@ -1,0 +1,73 @@
+@if (product) {
+<section class="py-8">
+    <div class="max-w-screen-2xl px-4 mx-auto">
+        <div class="grid grid-cols-2 gap-8">
+            <div class="max-w-xl mx-auto">
+                <img class="w-full" src="{{product.pictureUrl}}"
+                    alt="product image" />
+            </div>
+
+            <div class="mt-6 sm:mt-8 lg:mt-0">
+                <h1 class="text-2xl font-semibold text-gray-900">
+                    {{product.name}}
+                </h1>
+
+                <p>You have {{quantityInCart}} of this item in your cart</p>
+
+                <div class="mt-4 items-center gap-4 flex">
+                    <p class="text-3xl font-extrabold text-gray-900">
+                        {{product.price | currency}}
+                    </p>
+                </div>
+
+                <div *ngIf="product.colors && product.colors.length > 0" class="mt-6">
+                    <h3 class="text-sm font-medium text-gray-900">Color</h3>
+                    <div class="flex items-center gap-2 mt-2">
+                        <button *ngFor="let color of product.colors"
+                            (click)="selectColor(color)"
+                            [ngClass]="{'ring-2 ring-offset-2 ring-indigo-500': color === selectedColor, 'ring-1 ring-gray-300': color !== selectedColor}"
+                            class="relative w-8 h-8 rounded-full focus:outline-none"
+                            [style.backgroundColor]="color.toLowerCase()">
+                        </button>
+                    </div>
+                </div>
+
+                <div *ngIf="product.sizes && product.sizes.length > 0" class="mt-6">
+                    <h3 class="text-sm font-medium text-gray-900">Size</h3>
+                    <div class="flex flex-wrap items-center gap-2 mt-2">
+                        <button *ngFor="let size of product.sizes"
+                            (click)="selectSize(size)"
+                            [ngClass]="{'bg-indigo-600 text-white': size === selectedSize, 'bg-white text-gray-900 ring-1 ring-inset ring-gray-300': size !== selectedSize}"
+                            class="px-4 py-2 text-sm font-medium rounded-md focus:outline-none">
+                            {{size}}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mt-6">
+                    <button (click)="updateCart()" mat-flat-button 
+                        [disabled]="quantity === quantityInCart" 
+                        class="match-input-height">
+                        <mat-icon>shopping_cart</mat-icon>
+                       {{getButtonText()}}
+                    </button>
+
+                    <mat-form-field appearance="outline" class="flex flex-row">
+                        <mat-label>Quantity</mat-label>
+                        <input matInput min="0" type="number" [(ngModel)]="quantity" 
+                            type="number">
+                    </mat-form-field>
+                </div>
+
+                <mat-divider class="my-6"></mat-divider>
+
+                <p class="mt-6 text-gray-500">
+                    {{product.description}}
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+}

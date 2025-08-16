@@ -1,0 +1,346 @@
+// Modern Header Styles
+.modern-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--header-background);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 80px;
+}
+
+// Logo Section
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  // background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.025em;
+  transition: color 0.3s;
+}
+
+// Navigation Section
+.navigation-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 3rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  &:hover {
+    color: #ff6b35;
+    background: var(--button-hover-color);
+  }
+  
+  &.nav-active {
+    color: #ff6b35;
+    font-weight: 600;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background: #ff6b35;
+      border-radius: 1px;
+    }
+  }
+}
+
+// Header Actions
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+// Cart Button
+.theme-toggle-button,
+.cart-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--button-hover-color);
+    transform: translateY(-1px);
+  }
+  
+  mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// User Menu
+.user-menu {
+  position: relative;
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  background: transparent;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--button-hover-color);
+  }
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.dropdown-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+// Auth Buttons
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.login-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--button-hover-color);
+  }
+}
+
+.register-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+  color: white !important;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+}
+
+// Loading Bar
+.loading-bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+// Badge Customization
+::ng-deep .mat-badge-content {
+  background: #ff6b35 !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+::ng-deep .mat-badge-medium .mat-badge-content {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+}
+
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 0 1.5rem;
+  }
+  
+  .navigation-section {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+    height: 70px;
+  }
+  
+  .navigation-section {
+    margin: 0 1rem;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .logo-text {
+    font-size: 1.25rem;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .loading-bar {
+    top: 70px;
+  }
+}
+
+
+
+
+.user-dropdown-panel {
+  .mat-mdc-menu-content {
+    padding: 0.5rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-info {
+    padding: 1rem 1.25rem;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .user-email {
+    font-size: 0.9rem;
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .mat-mdc-menu-item {
+    width: 90%;
+    margin: 0.25rem 0;
+    gap: 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+
+    .mdc-list-item__content {
+      justify-content: center !important;
+    }
+
+    &:hover {
+      background-color: #f9fafb !important;
+      color: #ff6b35 !important;
+
+      mat-icon {
+        color: #ff6b35 !important;
+      }
+    }
+  }
+
+  mat-divider {
+    width: 90%;
+    margin: 0.5rem 0;
+    border-color: #f3f4f6;
+  }
+
+  
+}
+
+@media (max-width: 640px) {
+  .navigation-section {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .auth-buttons {
+    gap: 0.5rem;
+  }
+  
+  .login-btn,
+  .register-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
