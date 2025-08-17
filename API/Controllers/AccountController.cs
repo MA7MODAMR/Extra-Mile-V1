@@ -32,6 +32,37 @@ public class AccountController(SignInManager<AppUser> signInManager) : BaseApiCo
 
             return ValidationProblem();
         }
+        // Assign default Customer role
+        await signInManager.UserManager.AddToRoleAsync(user, "Customer");
+
+        return Ok();
+    }
+
+    [HttpPost("register-vendor")]
+    public async Task<ActionResult> RegisterVendor(RegisterDto registerDto)
+    {
+        var user = new AppUser
+        {
+            FirstName = registerDto.FirstName,
+            LastName = registerDto.LastName,
+            Email = registerDto.Email,
+            UserName = registerDto.Email
+        };
+
+        var result = await signInManager.UserManager.CreateAsync(user, registerDto.Password);
+
+        if (!result.Succeeded)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
+
+            return ValidationProblem();
+        }
+
+        // Assign Vendor role
+        await signInManager.UserManager.AddToRoleAsync(user, "Vendor");
 
         return Ok();
     }

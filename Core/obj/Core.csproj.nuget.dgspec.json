@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\backup final gp\\Extra_Mile\\Core\\Core.csproj": {}
+    "F:\\Github\\Extra_Mile_V1\\Extra-Mile-V1\\Core\\Core.csproj": {}
   },
   "projects": {
-    "D:\\backup final gp\\Extra_Mile\\Core\\Core.csproj": {
+    "F:\\Github\\Extra_Mile_V1\\Extra-Mile-V1\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\backup final gp\\Extra_Mile\\Core\\Core.csproj",
+        "projectUniqueName": "F:\\Github\\Extra_Mile_V1\\Extra-Mile-V1\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\backup final gp\\Extra_Mile\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\M.Elkholy\\.nuget\\packages\\",
-        "outputPath": "D:\\backup final gp\\Extra_Mile\\Core\\obj\\",
+        "projectPath": "F:\\Github\\Extra_Mile_V1\\Extra-Mile-V1\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "F:\\Github\\Extra_Mile_V1\\Extra-Mile-V1\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\M.Elkholy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -52,7 +53,7 @@
           "dependencies": {
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[9.0.8, )"
             }
           },
           "imports": [

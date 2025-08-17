@@ -1,3 +1,4 @@
+using Core.Entities;
 using System;
 
 namespace Core.Specifications;
@@ -34,4 +35,5 @@ public class ProductSpecParams : PagingParams
         get => _search ?? "";
         set => _search = value.ToLower();
     }
+    public ProductStatus? Status { get; set; }
 }
