@@ -11,5 +11,18 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
         builder.Property(x => x.Price).HasColumnType("decimal(18,2)");
         builder.Property(x => x.Name).IsRequired();
-    }
+
+        // configuration for the enum
+        builder.Property(p => p.Status)
+            .HasConversion(
+                s => s.ToString(),
+                s => (ProductStatus)Enum.Parse(typeof(ProductStatus), s)
+            ); // Store the enum as a string (e.g., "Pending")
+
+
+        builder.HasOne(p => p.Vendor)
+            .WithMany()
+            .HasForeignKey(p => p.VendorId)
+            .OnDelete(DeleteBehavior.SetNull);
+}
 }
