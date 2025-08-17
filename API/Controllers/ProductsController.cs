@@ -1,3 +1,4 @@
+using API.Extensions;
 using API.RequestHelpers;
 using Core.Entities;
 using Core.Interfaces;
@@ -13,6 +14,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery]ProductSpecParams productParams)
     {
+        productParams.Status = ProductStatus.Approved;
         var spec = new ProductSpecification(productParams);
 
         return await CreatePagedResult(unit.Repository<Product>(), spec,
@@ -27,6 +29,9 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
 
         if (product == null) return NotFound();
 
+        // Only show approved products to public
+        if (product.Status != ProductStatus.Approved) return NotFound();
+
         return product;
     }
 
@@ -35,6 +40,13 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
     [HttpPost]
     public async Task<ActionResult<Product>> CreateProduct(Product product)
     {
+        if (User.IsInRole("Admin"))
+        {
+            // Admin creates products as approved by default
+            product.Status = ProductStatus.Approved;
+            product.VendorId = null; // Admin products have no vendor
+
+        }        
         unit.Repository<Product>().Add(product);
 
         if (await unit.Complete())
@@ -44,6 +56,28 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
 
         return BadRequest("Problem creating product");
     }
+
+    //[InvalidateCache("api/products|")]
+    //[Authorize(Roles = "Vendor")]
+    //[HttpPost("vendor")]
+    //public async Task<ActionResult<Product>> CreateVendorProduct(Product product)
+    //{
+        
+    //    // Vendor creates products as pending
+    //    product.Status = ProductStatus.Pending;
+    //    product.VendorId = User.GetUserId();
+
+    //    unit.Repository<Product>().Add(product);
+
+    //    if (await unit.Complete())
+    //    {
+    //        return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+    //    }
+    //    ;
+
+    //    return BadRequest("Problem creating product");
+    //}
+
 
     [InvalidateCache("api/products|")]
     [Authorize(Roles = "Admin")]
@@ -98,9 +132,21 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
 
         return Ok(await unit.Repository<Product>().ListAsync(spec));
     }
-    
+
+    [Authorize(Roles = "Vendor")]
+    [HttpGet("my-products")]
+    public async Task<ActionResult<IReadOnlyList<Product>>> GetVendorProducts([FromQuery] ProductSpecParams productParams)
+    {
+        var vendorId = User.GetUserId();
+        var spec = new VendorProductSpecification(vendorId, productParams);
+
+        return await CreatePagedResult(unit.Repository<Product>(), spec,
+            productParams.PageIndex, productParams.PageSize);
+    }
+
     private bool ProductExists(int id)
     {
         return unit.Repository<Product>().Exists(id);
     }
 }
+

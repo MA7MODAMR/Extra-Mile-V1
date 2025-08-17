@@ -17,7 +17,7 @@ namespace Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.6")
+                .HasAnnotation("ProductVersion", "9.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -255,11 +255,20 @@ namespace Infrastructure.Migrations
                     b.Property<int>("QuantityInStock")
                         .HasColumnType("int");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("VendorId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("VendorId");
 
                     b.ToTable("Products");
                 });
@@ -302,6 +311,12 @@ namespace Infrastructure.Migrations
                             Id = "customer-id",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
+                        },
+                        new
+                        {
+                            Id = "vendor-id",
+                            Name = "Vendor",
+                            NormalizedName = "VENDOR"
                         });
                 });
 
@@ -536,6 +551,16 @@ namespace Infrastructure.Migrations
 
                     b.Navigation("ItemOrdered")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Core.Entities.Product", b =>
+                {
+                    b.HasOne("Core.Entities.AppUser", "Vendor")
+                        .WithMany()
+                        .HasForeignKey("VendorId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Vendor");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

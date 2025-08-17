@@ -36,4 +36,10 @@ public static class ClaimsPrincipleExtensions
             ?? throw new AuthenticationException("Email claim not found");
         return email;
     }
+
+   
+    public static string? GetUserId(this ClaimsPrincipal user)
+    {
+        return user.FindFirstValue(ClaimTypes.NameIdentifier);
+    }
 }

@@ -5,12 +5,15 @@ namespace Core.Specifications;
 
 public class ProductSpecification : BaseSpecification<Product>
 {
-    public ProductSpecification(ProductSpecParams productParams)
+    public ProductSpecification(ProductSpecParams productParams, ProductStatus? statusFilter = null)
         : base(x =>
             (string.IsNullOrEmpty(productParams.Search)
                 || x.Name.ToLower().Contains(productParams.Search)) &&
             (!productParams.Brands.Any() || productParams.Brands.Contains(x.Brand)) &&
-            (!productParams.Types.Any() || productParams.Types.Contains(x.Type)))
+            (!productParams.Types.Any() || productParams.Types.Contains(x.Type)) &&
+            (!productParams.Status.HasValue || x.Status == productParams.Status)
+        )
+            
     {
         ApplyPaging(productParams.PageSize * (productParams.PageIndex - 1), productParams.PageSize);
 

@@ -1,91 +1,13 @@
-D:\final GP\skinet\Core\bin\Debug\net9.0\Core.deps.json
-D:\final GP\skinet\Core\bin\Debug\net9.0\Core.dll
-D:\final GP\skinet\Core\bin\Debug\net9.0\Core.pdb
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.sourcelink.json
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.dll
-D:\final GP\skinet\Core\obj\Debug\net9.0\refint\Core.dll
-D:\final GP\skinet\Core\obj\Debug\net9.0\Core.pdb
-D:\final GP\skinet\Core\obj\Debug\net9.0\ref\Core.dll
-D:\final GP\Extra Mile\Core\bin\Debug\net9.0\Core.deps.json
-D:\final GP\Extra Mile\Core\bin\Debug\net9.0\Core.dll
-D:\final GP\Extra Mile\Core\bin\Debug\net9.0\Core.pdb
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.sourcelink.json
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.dll
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\refint\Core.dll
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\Core.pdb
-D:\final GP\Extra Mile\Core\obj\Debug\net9.0\ref\Core.dll
-D:\final GP\Extra_Mile\Core\bin\Debug\net9.0\Core.deps.json
-D:\final GP\Extra_Mile\Core\bin\Debug\net9.0\Core.dll
-D:\final GP\Extra_Mile\Core\bin\Debug\net9.0\Core.pdb
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.sourcelink.json
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.dll
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\refint\Core.dll
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\Core.pdb
-D:\final GP\Extra_Mile\Core\obj\Debug\net9.0\ref\Core.dll
-D:\Final GP\Final_GP\Extra_Mile\Core\bin\Debug\net9.0\Core.deps.json
-D:\Final GP\Final_GP\Extra_Mile\Core\bin\Debug\net9.0\Core.dll
-D:\Final GP\Final_GP\Extra_Mile\Core\bin\Debug\net9.0\Core.pdb
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.sourcelink.json
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.dll
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\refint\Core.dll
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\Core.pdb
-D:\Final GP\Final_GP\Extra_Mile\Core\obj\Debug\net9.0\ref\Core.dll
-D:\FINAL-GP\Extra_Mile\Core\bin\Debug\net9.0\Core.deps.json
-D:\FINAL-GP\Extra_Mile\Core\bin\Debug\net9.0\Core.dll
-D:\FINAL-GP\Extra_Mile\Core\bin\Debug\net9.0\Core.pdb
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.sourcelink.json
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.dll
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\refint\Core.dll
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\Core.pdb
-D:\FINAL-GP\Extra_Mile\Core\obj\Debug\net9.0\ref\Core.dll
-D:\backup final gp\Extra_Mile\Core\bin\Debug\net9.0\Core.deps.json
-D:\backup final gp\Extra_Mile\Core\bin\Debug\net9.0\Core.dll
-D:\backup final gp\Extra_Mile\Core\bin\Debug\net9.0\Core.pdb
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.sourcelink.json
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.dll
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\refint\Core.dll
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\Core.pdb
-D:\backup final gp\Extra_Mile\Core\obj\Debug\net9.0\ref\Core.dll
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\bin\Debug\net9.0\Core.deps.json
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\bin\Debug\net9.0\Core.dll
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\bin\Debug\net9.0\Core.pdb
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.sourcelink.json
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.dll
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\refint\Core.dll
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.pdb
-F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\ref\Core.dll
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\bin\Debug\net9.0\Core.deps.json
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\bin\Debug\net9.0\Core.dll
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\bin\Debug\net9.0\Core.pdb
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.sourcelink.json
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.dll
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\refint\Core.dll
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.pdb
+F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\ref\Core.dll
