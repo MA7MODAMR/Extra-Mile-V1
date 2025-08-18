@@ -10,7 +10,7 @@ namespace API.Controllers;
 
 public class ProductsController(IUnitOfWork unit) : BaseApiController
 {
-    [Cached(100000)]
+    //[Cached(100000)]
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery]ProductSpecParams productParams)
     {

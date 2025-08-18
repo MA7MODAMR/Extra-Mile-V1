@@ -13,11 +13,13 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.Name).IsRequired();
 
         // configuration for the enum
-        builder.Property(p => p.Status)
-            .HasConversion(
-                s => s.ToString(),
-                s => (ProductStatus)Enum.Parse(typeof(ProductStatus), s)
-            ); // Store the enum as a string (e.g., "Pending")
+        //builder.Property(p => p.Status)
+        //    .HasConversion(
+        //        s => s.ToString(),
+        //        s => (ProductStatus)Enum.Parse(typeof(ProductStatus), s)
+            //); // Store the enum as a string (e.g., "Pending")
+        builder.Property(p => p.Status)    
+        .HasConversion<int>();
 
 
         builder.HasOne(p => p.Vendor)

@@ -11,3 +11,16 @@ F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.dl
 F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\refint\Core.dll
 F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\Core.pdb
 F:\Github\Skinet - Neil Cummings\Extramile+\skinet\Core\obj\Debug\net9.0\ref\Core.dll
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\bin\Debug\net9.0\Core.deps.json
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\bin\Debug\net9.0\Core.dll
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\bin\Debug\net9.0\Core.pdb
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.sourcelink.json
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.dll
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\refint\Core.dll
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\Core.pdb
+F:\Github\Extra_Mile_V1\Extra-Mile-V1\Core\obj\Debug\net9.0\ref\Core.dll
