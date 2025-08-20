@@ -1,0 +1,86 @@
+:host {
+  .summary-card {
+    background-color: #fff;
+    border-color: #e5e7eb;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .summary-title,
+  dt,
+  dd,
+  .voucher-label,
+  .applied-coupon-text {
+    color: #374151;
+  }
+
+  dd.discount {
+    color: #16a34a;
+  }
+
+  .total-row {
+    border-color: #e5e7eb;
+    dt,
+    dd {
+      color: #111827;
+      font-weight: 600;
+    }
+  }
+
+  button[mat-flat-button] {
+    background-color: var(--primary-color);
+    color: white;
+    &:hover {
+      background-color: var(--primary-color-dark);
+    }
+  }
+
+  button[mat-button] {
+    color: var(--primary-color);
+  }
+
+  .mat-mdc-form-field.mat-focused .mdc-notched-outline > *,
+  .mat-mdc-form-field.mat-focused .mat-mdc-floating-label {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+  }
+
+}
+
+:host-context(body.dark-theme) {
+  .summary-card {
+    background-color: var(--card-background-color);
+    border-color: var(--border-color);
+  }
+
+  .summary-title,
+  dt,
+  dd,
+  .voucher-label,
+  .applied-coupon-text {
+    color: var(--text-color);
+  }
+
+  dd.discount {
+    color: #4ade80;
+  }
+
+  .total-row {
+    border-color: var(--border-color);
+    dt,
+    dd {
+      color: var(--text-color);
+    }
+  }
+
+  .mat-mdc-form-field .mat-mdc-floating-label {
+    color: var(--placeholder-text-color);
+  }
+
+  .mat-mdc-form-field .mdc-notched-outline > * {
+    border-color: var(--border-color) !important;
+  }
+
+  .mat-mdc-form-field input.mat-input-element {
+    color: var(--text-color) !important;
+  }
+}

@@ -1,0 +1,92 @@
+@use '@angular/material' as mat;
+
+:root {
+  --primary-color: #ff6b35;
+  --primary-color-dark: #e55a2b;
+  --background-color: #fafafa;
+  --text-color: #212121;
+  --card-background-color: #ffffff;
+  --border-color: #e0e0e0;
+  --header-background: #ffffff;
+  --button-hover-color: #f5f5f5;
+  --hover-background-color: #f9fafb;
+  --disabled-text-color: #d1d5db;
+  --placeholder-text-color: #9ca3af;
+  --danger-color: #dc2626;
+  --danger-color-dark: #b91c1c;
+  --success-color: #16a34a;
+}
+
+body.dark-theme {
+  --primary-color: #ff8a50;
+  --primary-color-dark: #ff6b35;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background-color: #1e1e1e;
+  --border-color: #424242;
+  --header-background: #1e1e1e;
+  --button-hover-color: #333333;
+  --hover-background-color: #2a2a2a;
+  --disabled-text-color: #555555;
+  --placeholder-text-color: #777777;
+  --danger-color: #f87171;
+  --danger-color-dark: #fca5a5;
+  --success-color: #4ade80;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  @include mat.button-overrides((filled-container-shape: '6px',
+      outlined-container-shape: '6px'
+    ));
+  @include mat.badge-overrides((background-color: blue));
+}
+
+.match-input-height {
+  height: var(--mat-form-field-container-height) !important;
+}
+
+.mdc-notched-outline__notch {
+  border-right-style: none !important;
+}
+
+.snack-error {
+  @include mat.snack-bar-overrides((button-color: white,
+      container-color: red,
+      supporting-text-color: white));
+}
+
+.snack-success {
+  @include mat.snack-bar-overrides((button-color: white,
+      container-color: green,
+      supporting-text-color: white));
+}
+
+/* Pagination Arrow Color Overrides */
+.mat-mdc-paginator-navigation-previous .mat-icon,
+.mat-mdc-paginator-navigation-next .mat-icon,
+.mat-mdc-paginator-navigation-first .mat-icon,
+.mat-mdc-paginator-navigation-last .mat-icon {
+  color: #000 !important;
+}
+
+body.dark-theme {
+
+  .mat-mdc-paginator-navigation-previous .mat-icon,
+  .mat-mdc-paginator-navigation-next .mat-icon,
+  .mat-mdc-paginator-navigation-first .mat-icon,
+  .mat-mdc-paginator-navigation-last .mat-icon {
+    color: #fff !important;
+  }
+}
+
+.mat-mdc-paginator-navigation-next .mat-icon,
+.mat-mdc-paginator-navigation-last .mat-icon {
+  color: #fff !important;
+}

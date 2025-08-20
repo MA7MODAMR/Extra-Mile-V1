@@ -1,0 +1,207 @@
+<div class="admin-dashboard">
+  <!-- Header Section -->
+  <div class="dashboard-header">
+    <div class="header-content">
+      <div class="welcome-section">
+        <h1 class="dashboard-title">
+          Welcome back, <span class="admin-name">Administrator</span>
+        </h1>
+        <p class="dashboard-subtitle">Manage the platform and oversee all operations</p>
+      </div>
+      <div class="header-actions ">
+        <button mat-icon-button (click)="loadDashboardData()" matTooltip="Refresh Data" class="refresh-btn ">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistics Cards -->
+  <div class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card total-orders" (click)="navigateToOrders()">
+        <div class="stat-icon">
+          <mat-icon>shopping_cart</mat-icon>
+        </div>
+        <div class="stat-content">
+          <h3 class="stat-title">Total Orders</h3>
+          @if (isLoading) {
+            <div class="loading-spinner">
+              <mat-spinner diameter="30"></mat-spinner>
+            </div>
+          } @else {
+            <p class="stat-value">{{ totalOrders }}</p>
+          }
+          <p class="stat-description">All platform orders</p>
+        </div>
+      </div>
+
+      <div class="stat-card pending-products" (click)="navigateToProducts()">
+        <div class="stat-icon">
+          <mat-icon>pending_actions</mat-icon>
+        </div>
+        <div class="stat-content">
+          <h3 class="stat-title">Pending Products</h3>
+          @if (isLoading) {
+            <div class="loading-spinner">
+              <mat-spinner diameter="30"></mat-spinner>
+            </div>
+          } @else {
+            <p class="stat-value">{{ pendingProducts }}</p>
+          }
+          <p class="stat-description">Awaiting review</p>
+        </div>
+      </div>
+
+      <div class="stat-card active-vendors">
+        <div class="stat-icon">
+          <mat-icon>group</mat-icon>
+        </div>
+        <div class="stat-content">
+          <h3 class="stat-title">Active Vendors</h3>
+          @if (isLoading) {
+            <div class="loading-spinner">
+              <mat-spinner diameter="30"></mat-spinner>
+            </div>
+          } @else {
+            <p class="stat-value">{{ activeVendors }}</p>
+          }
+          <p class="stat-description">Registered vendors</p>
+        </div>
+      </div>
+
+      <div class="stat-card total-revenue">
+        <div class="stat-icon">
+          <mat-icon>trending_up</mat-icon>
+        </div>
+        <div class="stat-content">
+          <h3 class="stat-title">Total Revenue</h3>
+          @if (isLoading) {
+            <div class="loading-spinner">
+              <mat-spinner diameter="30"></mat-spinner>
+            </div>
+          } @else {
+            <p class="stat-value">{{ totalRevenue | currency }}</p>
+          }
+          <p class="stat-description">Platform earnings</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Grid -->
+  <div class="main-content">
+    <!-- Quick Actions Section -->
+    <div class="content-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <mat-icon>flash_on</mat-icon>
+          Quick Actions
+        </h2>
+      </div>
+
+      <div class="actions-card">
+        <div class="actions-grid">
+          <button mat-raised-button color="primary" routerLink="/admin/products" class="action-btn">
+            <mat-icon>checklist</mat-icon>
+            <span>Manage Products</span>
+          </button>
+          <button mat-raised-button color="accent" routerLink="/admin/orders" class="action-btn">
+            <mat-icon>receipt_long</mat-icon>
+            <span>View Orders</span>
+          </button>
+          <button mat-raised-button color="warn" routerLink="/admin/vendors" class="action-btn">
+            <mat-icon>people</mat-icon>
+            <span>Manage Vendors</span>
+          </button>
+          <button mat-raised-button routerLink="/admin/reports" class="action-btn">
+            <mat-icon>analytics</mat-icon>
+            <span>View Reports</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="content-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <mat-icon>bar_chart</mat-icon>
+          Analytics Overview
+        </h2>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <div class="card-header">
+            <h3 class="card-title">Sales Over Time</h3>
+          </div>
+          <div class="card-content">
+            <div class="chart-container">
+              <ngx-charts-bar-vertical
+                [results]="salesData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [legend]="false"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                xAxisLabel="Month"
+                yAxisLabel="Sales (USD)">
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="card-header">
+            <h3 class="card-title">Product Status Distribution</h3>
+          </div>
+          <div class="card-content">
+            <div class="chart-container">
+              <ngx-charts-pie-chart
+                [results]="productStatusData"
+                [labels]="true"
+                [legend]="true">
+              </ngx-charts-pie-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity Section -->
+    <div class="content-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <mat-icon>schedule</mat-icon>
+          Recent Activity
+        </h2>
+      </div>
+
+      <div class="activity-card">
+        <div class="card-content">
+          @if (recentActivity.length > 0) {
+            <div class="activity-list">
+              @for (activity of recentActivity; track $index) {
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <mat-icon>{{ activity.icon }}</mat-icon>
+                  </div>
+                  <div class="activity-content">
+                    <h4 class="activity-title">{{ activity.message }}</h4>
+                    <p class="activity-time">{{ activity.time }}</p>
+                  </div>
+                </div>
+              }
+            </div>
+          } @else {
+            <div class="empty-state">
+              <mat-icon>info</mat-icon>
+              <p>No recent activity to display</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
